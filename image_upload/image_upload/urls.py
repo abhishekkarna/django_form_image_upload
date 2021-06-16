@@ -18,11 +18,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
 from Main import urls as MainUrls
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('image-upload', include(MainUrls)),
-]
+    path('', include(MainUrls)),]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

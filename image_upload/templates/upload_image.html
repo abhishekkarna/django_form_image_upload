@@ -1,0 +1,48 @@
+{% extends 'index.html' %} {% block content %}
+<div class="container-fluid h-100 bg-light text-dark">
+  <div class="row justify-content-center align-items-center">
+    <h1>Get Image Difference</h1>
+  </div>
+  <hr />
+  <div class="row justify-content-center align-items-center h-100">
+    <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
+      <form action="">
+        <div class="form-group">
+          <label for="sourceImage">Source Image</label>
+          <input type="file" id="sourceImage" class="form-control" required />
+        </div>
+        <div class="form-group">
+          <label for="checkprintImage">Checkprint Image</label>
+          <input
+            type="file"
+            id="checkprintImage"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <div class="container">
+            <div class="row p-0">
+              <div class="col p-0">
+                <button
+                  class="col-6 btn btn-primary float-left"
+                  id="uploadImage"
+                  type="button"
+                >
+                  <span
+                    id="spinner"
+                    class="spinner-border spinner-border-sm"
+                  ></span>
+                  Upload
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

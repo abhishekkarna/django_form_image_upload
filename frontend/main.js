@@ -28,17 +28,17 @@ $(document).ready(() => {
 
   $("#uploadImage").on("click", () => {
     $("#spinner").show();
+    $("#uploadImage,input").prop("disabled", true);
     fetch("http://localhost:8000/image-upload", {
       method: "POST",
       body: payload,
     })
       .then((response) => {
-        $("#spinner").hide();
-        response.blob().then((blob) => {
-          console.log("blob", blob);
-          openFile(blob, "result");
-        });
+        response.blob().then((blob) => openFile(blob, "result"));
       })
-      .catch((er) => $("#spinner").hide());
+      .finally(() => {
+        $("#uploadImage,input").prop("disabled", false);
+        $("#spinner").hide();
+      });
   });
 });

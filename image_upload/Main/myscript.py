@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-import urllib
 
 # red   = [0,0,255]
 # green = [0,255,0]

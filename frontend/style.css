@@ -1,0 +1,9 @@
+body {
+  height: 100vh;
+}
+label {
+  font-weight: bold;
+}
+*:disabled {
+  cursor: not-allowed;
+}

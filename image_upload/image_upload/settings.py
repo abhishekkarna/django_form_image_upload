@@ -59,7 +59,7 @@ ROOT_URLCONF = 'image_upload.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['image_upload/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -86,11 +86,8 @@ DATABASES = {
 }
 
 REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny'
-        # 'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_RENDERER_CLASSES': [
         'Main.custom_renderer.JPEGRenderer',
